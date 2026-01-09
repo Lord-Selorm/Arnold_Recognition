@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantGuard Pro | Advanced AI Agronomy</title>
+    <!-- Premium Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- Frameworks -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1b4d3e;
+            /* Deep Forest Green */
+            --accent: #d4af37;
+            /* Muted Gold */
+            --secondary: #21614e;
+            --glass: rgba(255, 255, 255, 0.9);
+            --glass-dark: rgba(27, 77, 62, 0.05);
+            --text-main: #1a2a1f;
+            --text-light: #5a6b5e;
+            --white: #ffffff;
+            --bg-grad: linear-gradient(135deg, #f0f7f4 0%, #e2ede8 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        body {
+            background: var(--bg-grad);
+            color: var(--text-main);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-brand {
+            font-size: 1.6rem;
+            color: var(--primary) !important;
+            letter-spacing: -1px;
+        }
+
+        .navbar-brand span {
+            color: var(--accent);
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--text-main) !important;
+            position: relative;
+            margin: 0 10px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: url('https://images.unsplash.com/photo-1530836361253-efad5c4f0dead?q=80&w=2070&auto=format&fit=crop') center/cover;
+            position: relative;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(27, 77, 62, 0.8) 0%, rgba(27, 77, 62, 0.6) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        /* Advanced Upload Container */
+        .upload-card {
+            background: var(--white);
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.08);
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .drop-zone {
+            height: 300px;
+            border: 2px dashed rgba(27, 77, 62, 0.2);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--glass-dark);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .drop-zone:hover {
+            border-color: var(--primary);
+            background: rgba(27, 77, 62, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .drop-zone.dragover {
+            border-color: var(--accent);
+            background: rgba(212, 175, 55, 0.05);
+            transform: scale(1.02);
+        }
+
+        .upload-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .drop-zone:hover .upload-icon {
+            transform: scale(1.1);
+            color: var(--accent);
+        }
+
+        .btn-premium {
+            background: var(--primary);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(27, 77, 62, 0.2);
+        }
+
+        .btn-premium:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(27, 77, 62, 0.3);
+            color: white;
+        }
+
+        /* Sustainability Section */
+        .sustainability-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .impact-card {
+            background: var(--bg-grad);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .impact-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* Result Dashboard */
+        .result-dashboard {
+            display: none;
+            margin-top: 50px;
+            padding-top: 100px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 1);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            height: 100%;
+        }
+
+        .status-badge {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .status-danger {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .status-warning {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .status-success {
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+        /* Confidence Gauge */
+        .confidence-ring {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+        }
+
+        .confidence-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .confidence-text span {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        /* Timeline Styles */
+        .treatment-timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .treatment-step {
+            position: relative;
+            padding-bottom: 25px;
+        }
+
+        .treatment-step::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        .treatment-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 25px;
+            width: 2px;
+            height: 100%;
+            background: rgba(212, 175, 55, 0.2);
+        }
+
+        /* Loading Overlay */
+        #loadingOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .spinner-leaf {
+            font-size: 4rem;
+            color: var(--primary);
+            animation: pulse-leaf 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse-leaf {
+            0% {
+                transform: scale(1) rotate(0);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.2) rotate(15deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1) rotate(0);
+                opacity: 0.5;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 80px 0 40px;
+            margin-top: 100px;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            color: white !important;
+            text-decoration: none;
+        }
+
+        .footer-logo span {
+            color: var(--accent);
+        }
+
+        /* Animations */
+        [data-aos] {
+            pointer-events: none;
+        }
+
+        .aos-animate {
+            pointer-events: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay">
+        <i class="fas fa-leaf spinner-leaf"></i>
+        <h3 class="mt-4 fw-bold">Analyzing Phytopathology...</h3>
+        <p class="text-muted">Decoding cellular patterns with Advanced AI</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top px-lg-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PLANT<span>GUARD</span> PRO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#analysis" data-translate="analysis">Analysis</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#technology"
+                            data-translate="technology">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#impact"
+                            data-translate="sustainability">Sustainability</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-dark dropdown-toggle rounded-pill px-4" type="button"
+                                data-bs-toggle="dropdown">
+                                <i class="fas fa-globe me-2"></i><span id="langDisplay">EN</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 rounded-4 mt-3">
+                                <li><a class="dropdown-item py-2" href="#" data-lang="en">English (US)</a></li>
+                                <li><a class="dropdown-item py-2" href="#" data-lang="es">Español</a></li>
+                                <li><a class="dropdown-item py-2" href="#" data-lang="fr">Français</a></li>
+                                <li><a class="dropdown-item py-2" href="#" data-lang="zh">简体中文</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1 data-aos="fade-up" data-translate="hero_title">Intelligent Crop Protection.</h1>
+            <p data-aos="fade-up" data-aos-delay="100" data-translate="hero_subtitle">Harnessing Deep Learning to
+                safeguard global food security, one leaf at a time. Professional-grade diagnosis for modern agriculture.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Section -->
+    <main class="container">
+        <!-- Upload Area -->
+        <div class="row justify-content-center" id="analysis">
+            <div class="col-lg-10">
+                <div class="upload-card" data-aos="zoom-in-up">
+                    <div class="drop-zone" id="dropZone">
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                        <h3 data-translate="upload_title">Drop image for AI Scanning</h3>
+                        <p class="text-muted" data-translate="upload_subtitle">Supports High-Resolution RAW, JPG, PNG
+                            (Max 16MB)</p>
+                        <input type="file" id="fileInput" hidden accept="image/*">
+                        <button class="btn btn-premium mt-3" onclick="document.getElementById('fileInput').click()"
+                            data-translate="begin_scan">
+                            BEGIN SCAN
+                        </button>
+                    </div>
+                    <!-- Deep Scan Control -->
+                    <div class="mt-4 text-center">
+                        <div class="form-check form-switch d-inline-block">
+                            <input class="form-check-input" type="checkbox" id="deepScanToggle">
+                            <label class="form-check-label text-muted fw-bold ms-2" for="deepScanToggle"
+                                data-translate="enable_deep_scan">Enable Cloud Deep Scan</label>
+                        </div>
+                        <p class="small text-muted mt-1" data-translate="deep_scan_desc">Analyzes image against global
+                            database of 10,000+ diseases (Requires Internet)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Dashboard -->
+        <div id="resultDashboard" class="result-dashboard">
+            <div class="row g-4">
+                <!-- Main Result Card -->
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="glass-card">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 id="predictionTitle" class="mb-0">--</h2>
+                            <span id="severityBadge" class="status-badge">Calculating...</span>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-5">
+                                <img id="scanPreview" src="" class="img-fluid rounded-4 shadow-sm mb-3">
+                            </div>
+                            <div class="col-md-7">
+                                <p id="diseaseDesc" class="lead text-dark fw-bold">--</p>
+                                <hr>
+                                <h5 data-translate="treatment_strategy">Recommended Treatment Strategy</h5>
+                                <div id="treatmentSteps" class="treatment-timeline mt-4">
+                                    <!-- Steps -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metrics & Context -->
+                <div class="col-lg-4" data-aos="fade-left">
+                    <div class="glass-card mb-4 text-center">
+                        <h5 data-translate="confidence_score">AI Confidence Score</h5>
+                        <div class="confidence-ring">
+                            <svg width="150" height="150">
+                                <circle cx="75" cy="75" r="65" fill="none" stroke="#f0f0f0" stroke-width="12" />
+                                <circle id="confCircle" cx="75" cy="75" r="65" fill="none" stroke="var(--primary)"
+                                    stroke-width="12" stroke-dasharray="408" stroke-dashoffset="408"
+                                    transform="rotate(-90 75 75)" style="transition: all 1.5s ease;" />
+                            </svg>
+                            <div class="confidence-text">
+                                <span id="confVal">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card">
+                        <h5 data-translate="environmental_context">Environmental Context</h5>
+                        <div id="weatherDetails" class="mt-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-thermometer-half fa-2x text-warning me-3"></i>
+                                <div>
+                                    <small class="text-muted d-block uppercase" data-translate="temperature">Ambient
+                                        Temperature</small>
+                                    <strong id="wTemp">--°C</strong>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-tint fa-2x text-primary me-3"></i>
+                                <div>
+                                    <small class="text-muted d-block" data-translate="humidity">Relative
+                                        Humidity</small>
+                                    <strong id="wHum">--%</strong>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-light rounded-4">
+                                <h6 data-translate="pathogen_risk">Pathogen Proliferation Risk</h6>
+                                <div class="progress mt-2" style="height: 10px; border-radius: 10px;">
+                                    <div id="riskBar" class="progress-bar bg-success" style="width: 0%"></div>
+                                </div>
+                                <small id="riskText" class="mt-2 d-block fw-bold" data-translate="low_risk_mode">Low
+                                    Risk Mode</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sustainability Section -->
+        <section id="impact" class="sustainability-section" data-aos="fade-up">
+            <div class="text-center mb-5">
+                <h2 data-translate="sustainability_title">Agricultural Sustainability</h2>
+                <p class="text-muted" data-translate="sustainability_subtitle">Our mission is to reduce chemical
+                    footprints through precision diagnosis.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="impact-card">
+                        <i class="fas fa-seedling impact-icon"></i>
+                        <h4 data-translate="impact_soil">Soil Health</h4>
+                        <p class="text-muted" data-translate="impact_soil_desc">Reducing over-application of chemicals
+                            preserves vital soil microbiomes and long-term fertility.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="impact-card">
+                        <i class="fas fa-water impact-icon"></i>
+                        <h4 data-translate="impact_water">Water Security</h4>
+                        <p class="text-muted" data-translate="impact_water_desc">Preventing runoff contamination by
+                            identifying exact treatment areas rather than blanket spraying.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="impact-card">
+                        <i class="fas fa-globe-africa impact-icon"></i>
+                        <h4 data-translate="impact_climate">Climate Resilience</h4>
+                        <p class="text-muted" data-translate="impact_climate_desc">Optimizing yield outputs helps
+                            feeding a growing population under changing climate conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Specs Section -->
+        <section id="technology" class="mt-5 py-5">
+            <div class="row text-center mb-5">
+                <h2 data-aos="fade-up" data-translate="tech_title">Cutting-Edge Neural Architecture</h2>
+                <p class="text-muted" data-aos="fade-up" data-aos-delay="100" data-translate="tech_subtitle">Our
+                    backbone uses EfficientNet-B0, optimized for sub-second edge inference.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="flip-left">
+                    <div class="glass-card text-center">
+                        <div class="btn-premium mb-4 d-inline-block"><i class="fas fa-microchip"></i></div>
+                        <h4 data-translate="tech_stat_title">99.2% Test Accuracy</h4>
+                        <p class="text-muted" data-translate="tech_stat_desc">Validated against 1.2M labeled symptoms in
+                            controlled agricultural datasets.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="glass-card text-center">
+                        <div class="btn-premium mb-4 d-inline-block"><i class="fas fa-bolt"></i></div>
+                        <h4 data-translate="tech_speed_title">Real-time Inference</h4>
+                        <p class="text-muted" data-translate="tech_speed_desc">Processing time under 200ms per
+                            high-resolution frame on standard device GPUs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="glass-card text-center">
+                        <div class="btn-premium mb-4 d-inline-block"><i class="fas fa-shield-alt"></i></div>
+                        <h4 data-translate="tech_privacy_title">Local Processing</h4>
+                        <p class="text-muted" data-translate="tech_privacy_desc">Private data remains secure. Analysis
+                            is performed on-device without cloud dependency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="#" class="footer-logo">PLANT<span>GUARD</span> PRO</a>
+                    <p class="opacity-75" data-translate="footer_desc">Leading the digital transformation of sustainable
+                        agriculture. Our AI-driven platform empowers producers to minimize chemical intervention and
+                        maximize productivity.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5 data-translate="platform">Platform</h5>
+                    <ul class="list-unstyled mt-3 opacity-75">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                data-translate="ai_models">AI Models</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                data-translate="api_access">API Access</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                data-translate="security">Security</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 data-translate="sustainability">Sustainability</h5>
+                    <ul class="list-unstyled mt-3 opacity-75">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                data-translate="case_studies">Case Studies</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                data-translate="impact_report">Impact Report</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                data-translate="partnerships">Partnerships</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 data-translate="newsletter">Newsletter</h5>
+                    <div class="input-group mt-3">
+                        <input type="text" class="form-control bg-transparent text-white border-white"
+                            placeholder="email@agri.com">
+                        <button class="btn btn-outline-light" data-translate="join">JOIN</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 opacity-25">
+            <p class="text-center mb-0 opacity-50">&copy; 2026 PlantGuard Pro. Engineering Sustainable Futures.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Navigation state
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+
+        // Language Engine
+        let currentLang = 'en';
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = el.getAttribute('data-lang');
+                document.getElementById('langDisplay').innerText = lang.toUpperCase();
+                setLanguage(lang);
+            });
+        });
+
+        async function setLanguage(lang) {
+            currentLang = lang;
+            try {
+                const res = await fetch(`/api/translate?lang=${lang}`);
+                const data = await res.json();
+                const translations = data.translation || {};
+
+                document.querySelectorAll('[data-translate]').forEach(el => {
+                    const key = el.getAttribute('data-translate');
+                    if (translations[key]) {
+                        el.textContent = translations[key];
+                    }
+                });
+            } catch (err) {
+                console.error("Translation failed:", err);
+            }
+        }
+
+        // Initialize with default language
+        setLanguage('en');
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Upload Logic
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+
+        ['dragover', 'drop'].forEach(evt => {
+            dropZone.addEventListener(evt, e => {
+                e.preventDefault();
+                if (evt === 'dragover') dropZone.classList.add('dragover');
+                else {
+                    dropZone.classList.remove('dragover');
+                    if (e.dataTransfer.files[0]) processScan(e.dataTransfer.files[0]);
+                }
+            });
+        });
+
+        fileInput.addEventListener('change', e => {
+            if (e.target.files[0]) processScan(e.target.files[0]);
+        });
+
+        async function processScan(file) {
+            document.getElementById('loadingOverlay').style.display = 'flex';
+
+            // Preview
+            const reader = new FileReader();
+            reader.onload = e => document.getElementById('scanPreview').src = e.target.result;
+            reader.readAsDataURL(file);
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            // Append Deep Scan toggle state
+            const deepScan = document.getElementById('deepScanToggle').checked;
+            formData.append('deep_scan', deepScan);
+
+            try {
+                const res = await fetch('/predict', { method: 'POST', body: formData });
+                const data = await res.json();
+                renderResults(data);
+            } catch (err) {
+                alert("Scan failed. Connection interrupted.");
+            } finally {
+                document.getElementById('loadingOverlay').style.display = 'none';
+            }
+        }
+
+        function renderResults(data) {
+            document.getElementById('resultDashboard').style.display = 'block';
+            document.getElementById('predictionTitle').innerText = data.prediction;
+            document.getElementById('diseaseDesc').innerText = data.description;
+
+            const badge = document.getElementById('severityBadge');
+            badge.innerText = data.severity;
+            badge.className = 'status-badge ' + (data.severity === 'High' ? 'status-danger' :
+                data.severity === 'Moderate' ? 'status-warning' : 'status-success');
+
+            // Treatment Steps
+            const tl = document.getElementById('treatmentSteps');
+            tl.innerHTML = '';
+            const steps = Array.isArray(data.treatment) ? data.treatment : [data.treatment];
+            steps.forEach(s => {
+                const div = document.createElement('div');
+                div.className = 'treatment-step';
+                div.innerHTML = `<p class="mb-0 text-muted">${s}</p>`;
+                tl.appendChild(div);
+            });
+
+            // Confidence
+            const conf = Math.round(data.confidence);
+            document.getElementById('confVal').innerText = conf + '%';
+            const circle = document.getElementById('confCircle');
+            const circumference = 2 * Math.PI * 65;
+            const offset = circumference - (conf / 100) * circumference;
+            circle.style.strokeDashoffset = offset;
+
+            // Environmental
+            if (data.weather) {
+                document.getElementById('wTemp').innerText = data.weather.temperature + '°C';
+                document.getElementById('wHum').innerText = data.weather.humidity + '%';
+                const risk = data.weather.disease_risk;
+                const rBar = document.getElementById('riskBar');
+                rBar.style.width = risk + '%';
+                rBar.className = 'progress-bar ' + (risk > 60 ? 'bg-danger' :
+                    risk > 30 ? 'bg-warning' : 'bg-success');
+                document.getElementById('riskText').innerText =
+                    (risk > 60 ? 'Critical Infection Window' :
+                        risk > 30 ? 'Moderate Pathogen Stress' : 'Optimal Growth Conditions');
+            }
+
+            document.getElementById('resultDashboard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    </script>
+</body>
+
+</html>

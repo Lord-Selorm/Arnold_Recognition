@@ -1,0 +1,2230 @@
+[
+  {
+    "id": "analysis_20260108_082707",
+    "timestamp": "2026-01-08T08:27:07.933747",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_2.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_082920",
+    "timestamp": "2026-01-08T08:29:20.583681",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_083313",
+    "timestamp": "2026-01-08T08:33:13.603382",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_2.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_084449",
+    "timestamp": "2026-01-08T08:44:49.676449",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_1.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_084500",
+    "timestamp": "2026-01-08T08:45:00.403194",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_3.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_092402",
+    "timestamp": "2026-01-08T09:24:02.073171",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_092741",
+    "timestamp": "2026-01-08T09:27:41.157839",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_112436",
+    "timestamp": "2026-01-08T11:24:36.339336",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_3.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_121601",
+    "timestamp": "2026-01-08T12:16:01.698036",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_3.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_121642",
+    "timestamp": "2026-01-08T12:16:42.797297",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_3.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_122203",
+    "timestamp": "2026-01-08T12:22:03.551603",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\test.png",
+    "analysis": {
+      "prediction": "Corn___healthy",
+      "confidence": 19.21,
+      "severity": "None",
+      "description": "The plant appears healthy with no visible signs of disease.",
+      "treatment": "Continue regular care and monitoring.",
+      "top3": [
+        {
+          "class": "Corn___healthy",
+          "confidence": 19.21
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 17.69
+        },
+        {
+          "class": "Tomato___healthy",
+          "confidence": 17.05
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_122658",
+    "timestamp": "2026-01-08T12:26:58.569984",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_3.jpg",
+    "analysis": {
+      "prediction": "Tomato___healthy",
+      "confidence": 20.38,
+      "severity": "None",
+      "description": "The plant appears healthy with no visible signs of disease.",
+      "treatment": "Continue regular care and monitoring.",
+      "top3": [
+        {
+          "class": "Tomato___healthy",
+          "confidence": 20.38
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 17.19
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "confidence": 16.93
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_123202",
+    "timestamp": "2026-01-08T12:32:02.453369",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download.jpg",
+    "analysis": {
+      "prediction": "Corn___healthy",
+      "confidence": 20.16,
+      "severity": "None",
+      "description": "The plant appears healthy with no visible signs of disease.",
+      "treatment": "Continue regular care and monitoring.",
+      "top3": [
+        {
+          "class": "Corn___healthy",
+          "confidence": 20.16
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 18.84
+        },
+        {
+          "class": "Tomato___healthy",
+          "confidence": 16.92
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_123457",
+    "timestamp": "2026-01-08T12:34:57.426297",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download.jpg",
+    "analysis": {
+      "prediction": "Apple___Apple_scab",
+      "confidence": 24.78,
+      "severity": "Unknown",
+      "description": "Disease detected: Apple___Apple_scab. Consult agricultural extension for specific treatment.",
+      "treatment": "Consult with local agricultural experts for proper diagnosis and treatment.",
+      "top3": [
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 24.78
+        },
+        {
+          "class": "Tomato___healthy",
+          "confidence": 19.6
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "confidence": 16.7
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_123607",
+    "timestamp": "2026-01-08T12:36:07.695884",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_1.jpg",
+    "analysis": {
+      "prediction": "Apple___Apple_scab",
+      "confidence": 26.97,
+      "severity": "Unknown",
+      "description": "Disease detected: Apple___Apple_scab. Consult agricultural extension for specific treatment.",
+      "treatment": "Consult with local agricultural experts for proper diagnosis and treatment.",
+      "top3": [
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 26.97
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 26.2
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "confidence": 16.36
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_123626",
+    "timestamp": "2026-01-08T12:36:26.743144",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_3.jpg",
+    "analysis": {
+      "prediction": "Corn___Common_rust",
+      "confidence": 32.67,
+      "severity": "High",
+      "description": "Orange or reddish-brown spots on leaves.",
+      "treatment": "Remove infected parts, apply appropriate fungicide.",
+      "top3": [
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 32.67
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 27.5
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "confidence": 17.05
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_124543",
+    "timestamp": "2026-01-08T12:45:43.576960",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\real_0.png",
+    "analysis": {
+      "prediction": "Apple___Apple_scab",
+      "confidence": 80.78,
+      "severity": "Moderate",
+      "description": "Apple scab is a serious fungal disease caused by Venturia inaequalis. It causes olive-green to black velvety spots on leaves and fruit, which can lead to premature leaf drop and distorted fruit.",
+      "treatment": [
+        "Remove and destroy infected fallen leaves and fruit to reduce inoculum.",
+        "Apply preventive fungicides (e.g., captan, sulfur, or myclobutanil) starting at bud break.",
+        "Prune trees to improve air circulation and sunlight penetration.",
+        "Consider planting scab-resistant varieties like \"Liberty\" or \"Enterprise\"."
+      ],
+      "top3": [
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 80.78
+        },
+        {
+          "class": "Apple___healthy",
+          "confidence": 8.06
+        },
+        {
+          "class": "Tomato___healthy",
+          "confidence": 4.06
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_124811",
+    "timestamp": "2026-01-08T12:48:11.491974",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download.jpg",
+    "analysis": {
+      "prediction": "Apple___Apple_scab",
+      "confidence": 23.98,
+      "severity": "Moderate",
+      "description": "Apple scab is a serious fungal disease caused by Venturia inaequalis. It causes olive-green to black velvety spots on leaves and fruit, which can lead to premature leaf drop and distorted fruit.",
+      "treatment": [
+        "Remove and destroy infected fallen leaves and fruit to reduce inoculum.",
+        "Apply preventive fungicides (e.g., captan, sulfur, or myclobutanil) starting at bud break.",
+        "Prune trees to improve air circulation and sunlight penetration.",
+        "Consider planting scab-resistant varieties like \"Liberty\" or \"Enterprise\"."
+      ],
+      "top3": [
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 23.98
+        },
+        {
+          "class": "Tomato___healthy",
+          "confidence": 18.9
+        },
+        {
+          "class": "Apple___healthy",
+          "confidence": 18.63
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_125014",
+    "timestamp": "2026-01-08T12:50:14.156193",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_1.jpg",
+    "analysis": {
+      "prediction": "Corn___Common_rust",
+      "confidence": 28.71,
+      "severity": "Moderate",
+      "description": "Common rust (Puccinia sorghi) is characterized by cinnamon-brown, elongated pustules on both upper and lower leaf surfaces. It thrives in cool, moist conditions.",
+      "treatment": [
+        "Fungicides like strobilurins or triazoles are effective if applied at the first sign of pustules.",
+        "Plant resistant hybrids which are highly effective at controlling this disease.",
+        "Avoid overhead irrigation to reduce leaf wetness duration.",
+        "Control weed hosts that might harbor the fungus."
+      ],
+      "top3": [
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 28.71
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 23.86
+        },
+        {
+          "class": "Apple___healthy",
+          "confidence": 17.8
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_125239",
+    "timestamp": "2026-01-08T12:52:39.771039",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_4.jpg",
+    "analysis": {
+      "prediction": "Apple___healthy",
+      "confidence": 26.28,
+      "severity": "None",
+      "description": "The plant leaf appears healthy and vibrant. No signs of infection, nutrient deficiency, or pest damage were detected.",
+      "treatment": [
+        "Maintain regular watering and fertilization schedules.",
+        "Continue monitoring leaves regularly for any changes.",
+        "Ensure the plant receives adequate sunlight and ventilation.",
+        "Practice preventive hygiene by cleaning gardening tools."
+      ],
+      "top3": [
+        {
+          "class": "Apple___healthy",
+          "confidence": 26.28
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 19.43
+        },
+        {
+          "class": "Tomato___healthy",
+          "confidence": 18.39
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_125300",
+    "timestamp": "2026-01-08T12:53:00.367945",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_5.jpg",
+    "analysis": {
+      "prediction": "Corn___Common_rust",
+      "confidence": 49.3,
+      "severity": "Moderate",
+      "description": "Common rust (Puccinia sorghi) is characterized by cinnamon-brown, elongated pustules on both upper and lower leaf surfaces. It thrives in cool, moist conditions.",
+      "treatment": [
+        "Fungicides like strobilurins or triazoles are effective if applied at the first sign of pustules.",
+        "Plant resistant hybrids which are highly effective at controlling this disease.",
+        "Avoid overhead irrigation to reduce leaf wetness duration.",
+        "Control weed hosts that might harbor the fungus."
+      ],
+      "top3": [
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 49.3
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 18.92
+        },
+        {
+          "class": "Apple___healthy",
+          "confidence": 18.2
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_130457",
+    "timestamp": "2026-01-08T13:04:57.534095",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_5.jpg",
+    "analysis": {
+      "prediction": "Corn___Common_rust",
+      "confidence": 49.3,
+      "severity": "Moderate",
+      "description": "Common rust (Puccinia sorghi) is characterized by cinnamon-brown, elongated pustules on both upper and lower leaf surfaces. It thrives in cool, moist conditions.",
+      "treatment": [
+        "Fungicides like strobilurins or triazoles are effective if applied at the first sign of pustules.",
+        "Plant resistant hybrids which are highly effective at controlling this disease.",
+        "Avoid overhead irrigation to reduce leaf wetness duration.",
+        "Control weed hosts that might harbor the fungus."
+      ],
+      "top3": [
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 49.3
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 18.92
+        },
+        {
+          "class": "Apple___healthy",
+          "confidence": 18.2
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_130524",
+    "timestamp": "2026-01-08T13:05:24.079972",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\test.gif",
+    "analysis": {
+      "prediction": "Corn___healthy",
+      "confidence": 22.44,
+      "severity": "None",
+      "description": "The plant leaf appears healthy and vibrant. No signs of infection, nutrient deficiency, or pest damage were detected.",
+      "treatment": [
+        "Maintain regular watering and fertilization schedules.",
+        "Continue monitoring leaves regularly for any changes.",
+        "Ensure the plant receives adequate sunlight and ventilation.",
+        "Practice preventive hygiene by cleaning gardening tools."
+      ],
+      "top3": [
+        {
+          "class": "Corn___healthy",
+          "confidence": 22.44
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "confidence": 18.93
+        },
+        {
+          "class": "Tomato___healthy",
+          "confidence": 15.86
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_130553",
+    "timestamp": "2026-01-08T13:05:53.898355",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_3.jpg",
+    "analysis": {
+      "prediction": "Corn___Common_rust",
+      "confidence": 29.62,
+      "severity": "Moderate",
+      "description": "Common rust (Puccinia sorghi) is characterized by cinnamon-brown, elongated pustules on both upper and lower leaf surfaces. It thrives in cool, moist conditions.",
+      "treatment": [
+        "Fungicides like strobilurins or triazoles are effective if applied at the first sign of pustules.",
+        "Plant resistant hybrids which are highly effective at controlling this disease.",
+        "Avoid overhead irrigation to reduce leaf wetness duration.",
+        "Control weed hosts that might harbor the fungus."
+      ],
+      "top3": [
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 29.62
+        },
+        {
+          "class": "Apple___healthy",
+          "confidence": 26.51
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "confidence": 16.18
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_130610",
+    "timestamp": "2026-01-08T13:06:10.185823",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_2.jpg",
+    "analysis": {
+      "prediction": "Apple___Apple_scab",
+      "confidence": 26.1,
+      "severity": "Moderate",
+      "description": "Apple scab is a serious fungal disease caused by Venturia inaequalis. It causes olive-green to black velvety spots on leaves and fruit, which can lead to premature leaf drop and distorted fruit.",
+      "treatment": [
+        "Remove and destroy infected fallen leaves and fruit to reduce inoculum.",
+        "Apply preventive fungicides (e.g., captan, sulfur, or myclobutanil) starting at bud break.",
+        "Prune trees to improve air circulation and sunlight penetration.",
+        "Consider planting scab-resistant varieties like \"Liberty\" or \"Enterprise\"."
+      ],
+      "top3": [
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 26.1
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 24.15
+        },
+        {
+          "class": "Apple___healthy",
+          "confidence": 16.74
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_132409",
+    "timestamp": "2026-01-08T13:24:09.170166",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\real_0.png",
+    "analysis": {
+      "prediction": "Apple___Apple_scab",
+      "confidence": 72.37,
+      "severity": "Moderate",
+      "description": "Apple scab is a serious fungal disease caused by Venturia inaequalis. It causes olive-green to black velvety spots on leaves and fruit, which can lead to premature leaf drop and distorted fruit.",
+      "treatment": [
+        "Remove and destroy infected fallen leaves and fruit to reduce inoculum.",
+        "Apply preventive fungicides (e.g., captan, sulfur, or myclobutanil) starting at bud break.",
+        "Prune trees to improve air circulation and sunlight penetration.",
+        "Consider planting scab-resistant varieties like \"Liberty\" or \"Enterprise\"."
+      ],
+      "top3": [
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 72.37
+        },
+        {
+          "class": "Tomato___healthy",
+          "confidence": 12.25
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "confidence": 4.8
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_132525",
+    "timestamp": "2026-01-08T13:25:25.986363",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_3.jpg",
+    "analysis": {
+      "prediction": "Apple___Apple_scab",
+      "confidence": 19.1,
+      "severity": "Moderate",
+      "description": "Apple scab is a serious fungal disease caused by Venturia inaequalis. It causes olive-green to black velvety spots on leaves and fruit, which can lead to premature leaf drop and distorted fruit.",
+      "treatment": [
+        "Remove and destroy infected fallen leaves and fruit to reduce inoculum.",
+        "Apply preventive fungicides (e.g., captan, sulfur, or myclobutanil) starting at bud break.",
+        "Prune trees to improve air circulation and sunlight penetration.",
+        "Consider planting scab-resistant varieties like \"Liberty\" or \"Enterprise\"."
+      ],
+      "top3": [
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 19.1
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "confidence": 18.59
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 18.24
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_132729",
+    "timestamp": "2026-01-08T13:27:29.998216",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_2.jpg",
+    "analysis": {
+      "prediction": "Apple___Apple_scab",
+      "confidence": 24.89,
+      "severity": "Moderate",
+      "description": "Apple scab is a serious fungal disease caused by Venturia inaequalis. It causes olive-green to black velvety spots on leaves and fruit, which can lead to premature leaf drop and distorted fruit.",
+      "treatment": [
+        "Remove and destroy infected fallen leaves and fruit to reduce inoculum.",
+        "Apply preventive fungicides (e.g., captan, sulfur, or myclobutanil) starting at bud break.",
+        "Prune trees to improve air circulation and sunlight penetration.",
+        "Consider planting scab-resistant varieties like \"Liberty\" or \"Enterprise\"."
+      ],
+      "top3": [
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 24.89
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 20.3
+        },
+        {
+          "class": "Tomato___healthy",
+          "confidence": 15.79
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_133146",
+    "timestamp": "2026-01-08T13:31:46.986877",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_3.jpg",
+    "analysis": {
+      "prediction": "Apple___Apple_scab",
+      "confidence": 19.1,
+      "severity": "Moderate",
+      "description": "Apple scab is a serious fungal disease caused by Venturia inaequalis. It causes olive-green to black velvety spots on leaves and fruit, which can lead to premature leaf drop and distorted fruit.",
+      "treatment": [
+        "Remove and destroy infected fallen leaves and fruit to reduce inoculum.",
+        "Apply preventive fungicides (e.g., captan, sulfur, or myclobutanil) starting at bud break.",
+        "Prune trees to improve air circulation and sunlight penetration.",
+        "Consider planting scab-resistant varieties like \"Liberty\" or \"Enterprise\"."
+      ],
+      "top3": [
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 19.1
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "confidence": 18.59
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 18.24
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_133211",
+    "timestamp": "2026-01-08T13:32:11.513873",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_1.jpg",
+    "analysis": {
+      "prediction": "Apple___Apple_scab",
+      "confidence": 26.55,
+      "severity": "Moderate",
+      "description": "Apple scab is a serious fungal disease caused by Venturia inaequalis. It causes olive-green to black velvety spots on leaves and fruit, which can lead to premature leaf drop and distorted fruit.",
+      "treatment": [
+        "Remove and destroy infected fallen leaves and fruit to reduce inoculum.",
+        "Apply preventive fungicides (e.g., captan, sulfur, or myclobutanil) starting at bud break.",
+        "Prune trees to improve air circulation and sunlight penetration.",
+        "Consider planting scab-resistant varieties like \"Liberty\" or \"Enterprise\"."
+      ],
+      "top3": [
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 26.55
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 21.07
+        },
+        {
+          "class": "Apple___healthy",
+          "confidence": 18.74
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_133228",
+    "timestamp": "2026-01-08T13:32:28.695192",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_5.jpg",
+    "analysis": {
+      "prediction": "Corn___Common_rust",
+      "confidence": 39.82,
+      "severity": "Moderate",
+      "description": "Common rust (Puccinia sorghi) is characterized by cinnamon-brown, elongated pustules on both upper and lower leaf surfaces. It thrives in cool, moist conditions.",
+      "treatment": [
+        "Fungicides like strobilurins or triazoles are effective if applied at the first sign of pustules.",
+        "Plant resistant hybrids which are highly effective at controlling this disease.",
+        "Avoid overhead irrigation to reduce leaf wetness duration.",
+        "Control weed hosts that might harbor the fungus."
+      ],
+      "top3": [
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 39.82
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 14.71
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "confidence": 13.77
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_133253",
+    "timestamp": "2026-01-08T13:32:53.186497",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download.jpg",
+    "analysis": {
+      "prediction": "Tomato___healthy",
+      "confidence": 24.45,
+      "severity": "None",
+      "description": "The plant leaf appears healthy and vibrant. No signs of infection, nutrient deficiency, or pest damage were detected.",
+      "treatment": [
+        "Maintain regular watering and fertilization schedules.",
+        "Continue monitoring leaves regularly for any changes.",
+        "Ensure the plant receives adequate sunlight and ventilation.",
+        "Practice preventive hygiene by cleaning gardening tools."
+      ],
+      "top3": [
+        {
+          "class": "Tomato___healthy",
+          "confidence": 24.45
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 20.93
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 17.49
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_134205",
+    "timestamp": "2026-01-08T13:42:05.726269",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_1.jpg",
+    "analysis": {
+      "prediction": "Apple___Apple_scab",
+      "confidence": 26.55,
+      "severity": "Moderate",
+      "description": "Apple scab is a serious fungal disease caused by Venturia inaequalis. It causes olive-green to black velvety spots on leaves and fruit, which can lead to premature leaf drop and distorted fruit.",
+      "treatment": [
+        "Remove and destroy infected fallen leaves and fruit to reduce inoculum.",
+        "Apply preventive fungicides (e.g., captan, sulfur, or myclobutanil) starting at bud break.",
+        "Prune trees to improve air circulation and sunlight penetration.",
+        "Consider planting scab-resistant varieties like \"Liberty\" or \"Enterprise\"."
+      ],
+      "top3": [
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 26.55
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 21.07
+        },
+        {
+          "class": "Apple___healthy",
+          "confidence": 18.74
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_134215",
+    "timestamp": "2026-01-08T13:42:15.430144",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download.jpg",
+    "analysis": {
+      "prediction": "Tomato___healthy",
+      "confidence": 24.45,
+      "severity": "None",
+      "description": "The plant leaf appears healthy and vibrant. No signs of infection, nutrient deficiency, or pest damage were detected.",
+      "treatment": [
+        "Maintain regular watering and fertilization schedules.",
+        "Continue monitoring leaves regularly for any changes.",
+        "Ensure the plant receives adequate sunlight and ventilation.",
+        "Practice preventive hygiene by cleaning gardening tools."
+      ],
+      "top3": [
+        {
+          "class": "Tomato___healthy",
+          "confidence": 24.45
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 20.93
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 17.49
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_134453",
+    "timestamp": "2026-01-08T13:44:53.585387",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download.jpg",
+    "analysis": {
+      "prediction": "Tomato___healthy",
+      "confidence": 24.45,
+      "severity": "None",
+      "description": "The plant leaf appears healthy and vibrant. No signs of infection, nutrient deficiency, or pest damage were detected.",
+      "treatment": [
+        "Maintain regular watering and fertilization schedules.",
+        "Continue monitoring leaves regularly for any changes.",
+        "Ensure the plant receives adequate sunlight and ventilation.",
+        "Practice preventive hygiene by cleaning gardening tools."
+      ],
+      "top3": [
+        {
+          "class": "Tomato___healthy",
+          "confidence": 24.45
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 20.93
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 17.49
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_134510",
+    "timestamp": "2026-01-08T13:45:10.055214",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download.jpg",
+    "analysis": {
+      "prediction": "Tomato___healthy",
+      "confidence": 24.45,
+      "severity": "None",
+      "description": "The plant leaf appears healthy and vibrant. No signs of infection, nutrient deficiency, or pest damage were detected.",
+      "treatment": [
+        "Maintain regular watering and fertilization schedules.",
+        "Continue monitoring leaves regularly for any changes.",
+        "Ensure the plant receives adequate sunlight and ventilation.",
+        "Practice preventive hygiene by cleaning gardening tools."
+      ],
+      "top3": [
+        {
+          "class": "Tomato___healthy",
+          "confidence": 24.45
+        },
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 20.93
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 17.49
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_135118",
+    "timestamp": "2026-01-08T13:51:18.896664",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_5.jpg",
+    "analysis": {
+      "prediction": "Corn___Common_rust",
+      "confidence": 14.57,
+      "severity": "Moderate",
+      "description": "Common rust (Puccinia sorghi) is characterized by cinnamon-brown, elongated pustules on both upper and lower leaf surfaces. It thrives in cool, moist conditions.",
+      "treatment": [
+        "Fungicides like strobilurins or triazoles are effective if applied at the first sign of pustules.",
+        "Plant resistant hybrids which are highly effective at controlling this disease.",
+        "Avoid overhead irrigation to reduce leaf wetness duration.",
+        "Control weed hosts that might harbor the fungus."
+      ],
+      "top3": [
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 14.57
+        },
+        {
+          "class": "Apple___healthy",
+          "confidence": 10.92
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 7.99
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_135138",
+    "timestamp": "2026-01-08T13:51:38.332676",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_3.jpg",
+    "analysis": {
+      "prediction": "Corn___Common_rust",
+      "confidence": 9.0,
+      "severity": "Moderate",
+      "description": "Common rust (Puccinia sorghi) is characterized by cinnamon-brown, elongated pustules on both upper and lower leaf surfaces. It thrives in cool, moist conditions.",
+      "treatment": [
+        "Fungicides like strobilurins or triazoles are effective if applied at the first sign of pustules.",
+        "Plant resistant hybrids which are highly effective at controlling this disease.",
+        "Avoid overhead irrigation to reduce leaf wetness duration.",
+        "Control weed hosts that might harbor the fungus."
+      ],
+      "top3": [
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 9.0
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 8.13
+        },
+        {
+          "class": "Tomato___healthy",
+          "confidence": 8.05
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_135426",
+    "timestamp": "2026-01-08T13:54:26.663455",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_1.jpg",
+    "analysis": {
+      "prediction": "Corn___Common_rust",
+      "confidence": 4.88,
+      "severity": "Moderate",
+      "description": "Common rust (Puccinia sorghi) is characterized by cinnamon-brown, elongated pustules on both upper and lower leaf surfaces. It thrives in cool, moist conditions.",
+      "treatment": [
+        "Fungicides like strobilurins or triazoles are effective if applied at the first sign of pustules.",
+        "Plant resistant hybrids which are highly effective at controlling this disease.",
+        "Avoid overhead irrigation to reduce leaf wetness duration.",
+        "Control weed hosts that might harbor the fungus."
+      ],
+      "top3": [
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 4.88
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 4.51
+        },
+        {
+          "class": "Apple___healthy",
+          "confidence": 4.46
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_135706",
+    "timestamp": "2026-01-08T13:57:06.661764",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_10.jpg",
+    "analysis": {
+      "prediction": "Corn___Common_rust",
+      "confidence": 7.12,
+      "severity": "Moderate",
+      "description": "Common rust (Puccinia sorghi) is characterized by cinnamon-brown, elongated pustules on both upper and lower leaf surfaces. It thrives in cool, moist conditions.",
+      "treatment": [
+        "Fungicides like strobilurins or triazoles are effective if applied at the first sign of pustules.",
+        "Plant resistant hybrids which are highly effective at controlling this disease.",
+        "Avoid overhead irrigation to reduce leaf wetness duration.",
+        "Control weed hosts that might harbor the fungus."
+      ],
+      "top3": [
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 7.12
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "confidence": 6.19
+        },
+        {
+          "class": "Apple___healthy",
+          "confidence": 6.12
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_135717",
+    "timestamp": "2026-01-08T13:57:17.118645",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_9.jpg",
+    "analysis": {
+      "prediction": "Corn___Common_rust",
+      "confidence": 5.08,
+      "severity": "Moderate",
+      "description": "Common rust (Puccinia sorghi) is characterized by cinnamon-brown, elongated pustules on both upper and lower leaf surfaces. It thrives in cool, moist conditions.",
+      "treatment": [
+        "Fungicides like strobilurins or triazoles are effective if applied at the first sign of pustules.",
+        "Plant resistant hybrids which are highly effective at controlling this disease.",
+        "Avoid overhead irrigation to reduce leaf wetness duration.",
+        "Control weed hosts that might harbor the fungus."
+      ],
+      "top3": [
+        {
+          "class": "Corn___Common_rust",
+          "confidence": 5.08
+        },
+        {
+          "class": "Apple___Apple_scab",
+          "confidence": 4.75
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "confidence": 3.39
+        }
+      ],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_135925",
+    "timestamp": "2026-01-08T13:59:25.114100",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_10.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_140013",
+    "timestamp": "2026-01-08T14:00:13.402841",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_7.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_141651",
+    "timestamp": "2026-01-08T14:16:51.966480",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_10.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_144629",
+    "timestamp": "2026-01-08T14:46:29.445520",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_10.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_144728",
+    "timestamp": "2026-01-08T14:47:28.802021",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_9.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_145119",
+    "timestamp": "2026-01-08T14:51:19.309111",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_10.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_145647",
+    "timestamp": "2026-01-08T14:56:47.065697",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_6.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_150818",
+    "timestamp": "2026-01-08T15:08:18.322418",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_7.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  },
+  {
+    "id": "analysis_20260108_151045",
+    "timestamp": "2026-01-08T15:10:45.084056",
+    "image_path": "C:\\Users\\DEVICES\\Desktop\\VLM\\static\\uploads\\download_6.jpg",
+    "analysis": {
+      "prediction": "Demo Mode - Model Not Available",
+      "confidence": 0.0,
+      "severity": "unknown",
+      "description": "The trained model files were not found and no external API is configured.",
+      "treatment": "In demo mode, no specific treatment steps are available.",
+      "top3": [],
+      "weather": {
+        "current_temp": 22.5,
+        "humidity": 75,
+        "wind_speed": 8,
+        "conditions": "clouds",
+        "risk_factors": {
+          "temperature": 0.8,
+          "humidity": 0.9,
+          "wind": 0.5,
+          "conditions": 0.5
+        },
+        "overall_disease_risk": 0.675,
+        "recommendations": [
+          "High humidity increases fungal disease risk - ensure good air circulation",
+          "Optimal temperature for disease development - monitor plants closely",
+          "Cloudy conditions promote disease - avoid overhead watering"
+        ]
+      }
+    },
+    "follow_up_required": false,
+    "treatment_effectiveness": null,
+    "notes": ""
+  }
+]

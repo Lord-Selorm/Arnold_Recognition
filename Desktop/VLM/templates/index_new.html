@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantGuard AI - Advanced Plant Disease Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a7c2e;
+            --secondary-color: #3a6b1c;
+            --accent-color: #8b4513;
+            --dark-color: #2d5016;
+            --light-bg: #f5f9f0;
+            --gradient: linear-gradient(135deg, #4a7c2e 0%, #3a6b1c 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f7f0 25%, #e8f5e8 50%, #f5faf5 75%, #e8f5e8 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="leaf" x="0" y="0" width="150" height="150" patternUnits="userSpaceOnUse"><path fill="%234a7c2e" fill-opacity="0.02" d="M75,20 Q65,10 75,0 Q85,10 75,20 M75,130 Q65,140 75,150 Q85,140 75,130 M20,75 Q10,65 0,75 Q10,85 20,75 M130,75 Q140,65 150,75 Q140,85 130,75"/><circle cx="75" cy="75" r="3" fill="%233a6b1c" fill-opacity="0.015"/></pattern></defs><rect width="100%" height="100%" fill="url(%23leaf)"/><path fill="%234a7c2e" fill-opacity="0.01" d="M0,200 Q300,100 600,200 T1200,200 L1200,400 L0,400 Z"/><path fill="%233a6b1c" fill-opacity="0.008" d="M0,600 Q400,500 800,600 T1200,600 L1200,800 L0,800 Z"/></svg>') no-repeat center;
+            background-size: cover;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            padding: 80px 0;
+            text-align: center;
+            color: var(--dark-color);
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+        
+        /* Main Container */
+        .main-container {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            margin: -50px auto 50px;
+            max-width: 1400px;
+            padding: 50px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Upload Area */
+        .upload-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafb 100%);
+            border-radius: 20px;
+            padding: 60px 30px;
+            text-align: center;
+            border: 2px solid var(--primary-color);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(74, 124, 46, 0.1);
+        }
+        
+        .upload-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(74, 124, 46, 0.05), transparent);
+            transition: left 0.5s;
+        }
+        
+        .upload-section:hover::before {
+            left: 100%;
+        }
+        
+        .upload-section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(74, 124, 46, 0.15);
+            border-color: var(--secondary-color);
+        }
+        
+        .upload-section.dragover {
+            background: linear-gradient(135deg, #f0f7f0 0%, #e8f5e8 100%);
+            border-color: var(--secondary-color);
+            transform: scale(1.02);
+        }
+        
+        .upload-icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* Advanced Features Section */
+        .features-section {
+            margin: 60px 0;
+        }
+        
+        /* Feature Card */
+        .feature-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafb 100%);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(74, 124, 46, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid rgba(74, 124, 46, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(74, 124, 46, 0.12);
+            border-color: var(--primary-color);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        /* Results Section */
+        .results-section {
+            display: none;
+            margin-top: 50px;
+        }
+        
+        .result-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .result-header {
+            background: var(--gradient);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .result-body {
+            padding: 30px;
+        }
+        
+        /* Confidence Meter */
+        .confidence-meter {
+            height: 35px;
+            background: linear-gradient(135deg, #f8fafb 0%, #e9ecef 100%);
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            margin: 15px 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .confidence-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transition: width 1.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 15px;
+            color: white;
+            font-weight: 600;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px rgba(74, 124, 46, 0.2);
+        }
+        
+        .severity-indicator {
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        .severity-low { background: #fff3cd; color: #856404; }
+        .severity-moderate { background: #ffeaa7; color: #d63031; }
+        .severity-high { background: #f8d7da; color: #721c24; }
+        .severity-none { background: #d4edda; color: #155724; }
+        
+        /* Stats Cards */
+        .stats-grid {
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer .social-icons a:hover {
+            background: #e8f5e8;
+            color: #2d5016;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-leaf me-2"></i>PlantGuard AI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features" data-translate="features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-translate="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-translate="contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe me-1"></i><span id="currentLang">English</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#" data-lang="en">🇺🇸 English</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="es">🇪🇸 Español</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="fr">🇫🇷 Français</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="zh">🇨🇳 中文</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title" data-aos="fade-up" data-translate="title">PlantGuard AI</h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100" data-translate="upload_subtitle">Drag & drop or click to upload an image of your plant</p>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Disease Detection & Treatment System</p>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">38+</div>
+                        <div class="stat-label">Disease Classes</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number"><1s</div>
+                        <div class="stat-label">Analysis Time</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Availability</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="main-container">
+            <!-- Upload Section -->
+            <div class="upload-section" id="uploadArea" data-aos="fade-up">
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h3 class="mb-3" data-translate="upload_title">Upload Plant Image for Analysis</h3>
+                <p class="text-muted mb-4" data-translate="upload_subtitle">Drag & drop your plant leaf image here or click to browse</p>
+                <div class="upload-info mb-4">
+                    <div class="row text-center">
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="info-item">
+                                <i class="fas fa-image fa-2x text-success mb-2"></i>
+                                <p class="small mb-0">PNG, JPG, JPEG</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="info-item">
+                                <i class="fas fa-weight fa-2x text-primary mb-2"></i>
+                                <p class="small mb-0">Max 16MB</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="info-item">
+                                <i class="fas fa-leaf fa-2x text-warning mb-2"></i>
+                                <p class="small mb-0">Clear Leaf Photos</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="info-item">
+                                <i class="fas fa-shield-alt fa-2x text-info mb-2"></i>
+                                <p class="small mb-0">Secure & Private</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Temporarily hide image upload until we have a working API -->
+                <!-- <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                <button class="btn btn-success btn-lg px-5 py-3" onclick="document.getElementById('fileInput').click()">
+                    <i class="fas fa-camera me-2"></i>Choose Image
+                </button> -->
+                <div class="mt-3">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search plant or disease name..." data-translate="search_placeholder">
+                    <button class="btn btn-primary btn-lg w-100 mt-2" onclick="handleSearch()">
+                        <i class="fas fa-search me-2"></i>Search
+                    </button>
+                </div>
+                <div class="mt-3">
+                    <small class="text-muted">Or drag and drop your image here</small>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features-section" id="features">
+                <h2 class="text-center mb-5" data-aos="fade-up" data-translate="features">Advanced Features</h2>
+                <div class="row g-4">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <h4 data-translate="feature_ai">AI-Powered Detection</h4>
+                            <p data-translate="feature_ai_desc">State-of-the-art deep learning algorithms analyze plant images with 95% accuracy using advanced convolutional neural networks</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-pills"></i>
+                            </div>
+                            <h4 data-translate="feature_treatment">Treatment Recommendations</h4>
+                            <p data-translate="feature_treatment_desc">Get personalized, step-by-step treatment plans with specific fungicide recommendations and preventive care measures</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4 data-translate="feature_tracking">Disease Tracking</h4>
+                            <p data-translate="feature_tracking_desc">Monitor disease progression, treatment effectiveness, and receive alerts for preventive care timing</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4 data-translate="feature_mobile">Mobile Ready</h4>
+                            <p data-translate="feature_mobile_desc">Fully responsive design works seamlessly on smartphones, tablets, and desktop computers for field use</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4 data-translate="feature_realtime">Real-time Analysis</h4>
+                            <p data-translate="feature_realtime_desc">Get instant results in under 1 second with our optimized AI models and cloud-based processing</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4 data-translate="feature_database">Comprehensive Database</h4>
+                            <p data-translate="feature_database_desc">Access information on 38+ plant diseases across multiple crop types with detailed treatment protocols</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <section class="py-5" id="about">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6" data-aos="fade-right">
+                            <h2 class="mb-4" data-translate="about">About PlantGuard AI</h2>
+                            <p class="lead" data-translate="about_subtitle">Revolutionary plant disease detection powered by artificial intelligence</p>
+                            <p data-translate="about_description_1">PlantGuard AI represents a breakthrough in agricultural technology, combining cutting-edge deep learning algorithms with comprehensive plant pathology knowledge to provide farmers, gardeners, and agricultural professionals with instant, accurate disease diagnosis.</p>
+                            <p data-translate="about_description_2">Our system has been trained on thousands of plant images and validated by agricultural experts to ensure reliable results that help protect crops, increase yields, and promote sustainable farming practices.</p>
+                            
+                            <div class="row mt-4">
+                                <div class="col-6">
+                                    <h5 data-translate="accuracy_95">95% Accuracy</h5>
+                                </div>
+                                <div class="col-6">
+                                    <h5 data-translate="diseases_38">38+ Diseases</h5>
+                                </div>
+                                <div class="col-6">
+                                    <h5 data-translate="instant_results">Instant Results</h5>
+                                </div>
+                                <div class="col-6">
+                                    <h5 data-translate="expert_validated">Expert Validated</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-left">
+                            <div class="text-center">
+                                <div class="bg-light rounded p-5">
+                                    <i class="fas fa-leaf fa-6x text-success mb-4"></i>
+                                    <h4 data-translate="about">Our Mission</h4>
+                                    <p data-translate="mission_text">To democratize plant disease detection and make advanced agricultural technology accessible to everyone, from small-scale farmers to large agricultural operations.</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="py-5 bg-light" id="contact">
+                <div class="container">
+                    <div class="text-center mb-5" data-aos="fade-up">
+                        <h2 data-translate="contact">Get In Touch</h2>
+                        <p class="lead" data-translate="contact_subtitle">Have questions about PlantGuard AI? We'd love to hear from you!</p>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-6" data-aos="fade-right">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-4">
+                                    <h4 class="mb-4" data-translate="contact_info">Contact Information</h4>
+                                    
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-envelope fa-2x text-success me-3"></i>
+                                        <div>
+                                            <h6 class="mb-0" data-translate="email">Email</h6>
+                                            <p class="text-muted mb-0">mcebenselorm1598@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-phone fa-2x text-success me-3"></i>
+                                        <div>
+                                            <h6 class="mb-0" data-translate="phone">Phone</h6>
+                                            <p class="text-muted mb-0">+233 50 368 6210</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fab fa-github fa-2x text-success me-3"></i>
+                                        <div>
+                                            <h6 class="mb-0">GitHub</h6>
+                                            <p class="text-muted mb-0">github.com/Lord-Selorm</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fab fa-linkedin fa-2x text-success me-3"></i>
+                                        <div>
+                                            <h6 class="mb-0">LinkedIn</h6>
+                                            <p class="text-muted mb-0">linkedin.com/in/lord-selorm-mceben-nornormey-661172301</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-clock fa-2x text-success me-3"></i>
+                                        <div>
+                                            <h6 class="mb-0" data-translate="business_hours">Business Hours</h6>
+                                            <p class="text-muted mb-0">Monday - Friday: 9:00 AM - 6:00 PM PST</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6" data-aos="fade-left">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-4">
+                                    <h4 class="mb-4" data-translate="send_message">Send us a Message</h4>
+                                    <form id="contactForm">
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label" data-translate="name">Name</label>
+                                            <input type="text" class="form-control" id="name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label" data-translate="email">Email</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="subject" class="form-label" data-translate="subject">Subject</label>
+                                            <input type="text" class="form-control" id="subject" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message" class="form-label" data-translate="message">Message</label>
+                                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-success btn-lg w-100">
+                                            <i class="fas fa-paper-plane me-2"></i><span data-translate="send_message_btn">Send Message</span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="text-center mt-5 pt-5" data-aos="fade-up">
+                        <h4 data-translate="connect_with_me">Connect With Me</h4>
+                        <div class="mt-3">
+                            <a href="https://github.com/Lord-Selorm" target="_blank" class="btn btn-outline-success btn-lg me-3">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/lord-selorm-mceben-nornormey-661172301" target="_blank" class="btn btn-outline-success btn-lg">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <div class="container my-5" id="resultsSection" style="display: none;">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-header bg-gradient-success text-white py-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h3 class="mb-0"><i class="fas fa-microscope me-2"></i><span data-translate="results">Detection Results</span></h3>
+                                <small class="opacity-75">AI-Powered Plant Disease Analysis</small>
+                            </div>
+                            <div class="col-md-4 text-end">
+                                <div class="analysis-status">
+                                    <span class="badge bg-light text-success fs-6">
+                                        <i class="fas fa-check-circle me-1"></i>Analysis Complete
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <!-- Disease Overview -->
+                        <div class="row mb-4">
+                            <div class="col-md-4">
+                                <div class="uploaded-image-container">
+                                    <h6 class="text-center mb-3">
+                                        <i class="fas fa-image me-2"></i>Analyzed Image
+                                    </h6>
+                                    <div class="image-preview bg-light rounded p-3">
+                                        <img id="uploadedImage" src="" alt="Uploaded plant image" class="img-fluid rounded shadow-sm" style="max-height: 200px; width: 100%; object-fit: cover;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="confidence-meter bg-light rounded p-4">
+                                    <h6 class="text-center mb-3">
+                                        <i class="fas fa-chart-line me-2"></i><span data-translate="confidence">Confidence Level</span>
+                                    </h6>
+                                    <div class="circular-progress mb-3">
+                                        <div class="progress-circle" style="position: relative; width: 120px; height: 120px; margin: 0 auto;">
+                                            <svg width="120" height="120">
+                                                <circle cx="60" cy="60" r="50" fill="none" stroke="#e9ecef" stroke-width="10"/>
+                                                <circle id="confidenceCircle" cx="60" cy="60" r="50" fill="none" stroke="#28a745" stroke-width="10" 
+                                                        stroke-dasharray="314" stroke-dashoffset="314" 
+                                                        transform="rotate(-90 60 60)" style="transition: stroke-dashoffset 0.5s ease;"/>
+                                            </svg>
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                                <span id="confidenceValue" class="h5 fw-bold">0%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <small class="text-muted">AI Model Confidence</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="disease-overview">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="disease-icon me-3">
+                                            <i class="fas fa-virus fa-3x text-danger"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="mb-2" id="diseaseName">--</h4>
+                                            <div class="disease-meta">
+                                                <span class="badge bg-danger me-2" id="diseaseSeverity">--</span>
+                                                <span class="badge bg-success" id="diseaseConfidence">--</span>
+                                                <span class="badge bg-info ms-2">
+                                                    <i class="fas fa-clock me-1"></i>
+                                                    <span id="analysisTime">--</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="lead text-muted" id="diseaseDescription">--</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Detailed Analysis Tabs -->
+                        <ul class="nav nav-tabs mb-4" id="analysisTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="symptoms-tab" data-bs-toggle="tab" data-bs-target="#symptoms" type="button" role="tab">
+                                    <i class="fas fa-stethoscope me-2"></i><span data-translate="symptoms">Symptoms</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="treatment-tab" data-bs-toggle="tab" data-bs-target="#treatment" type="button" role="tab">
+                                    <i class="fas fa-medkit me-2"></i><span data-translate="treatment">Treatment</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="weather-tab" data-bs-toggle="tab" data-bs-target="#weather" type="button" role="tab">
+                                    <i class="fas fa-cloud-sun me-2"></i><span data-translate="weather_analysis">Weather</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab">
+                                    <i class="fas fa-chart-line me-2"></i><span data-translate="analysis_details">Details</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="alternatives-tab" data-bs-toggle="tab" data-bs-target="#alternatives" type="button" role="tab">
+                                    <i class="fas fa-chart-bar me-2"></i><span data-translate="alternative_diagnoses">Alternatives</span>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="analysisTabContent">
+                            <!-- Symptoms Tab -->
+                            <div class="tab-pane fade show active" id="symptoms" role="tabpanel">
+                                <div class="symptoms-panel">
+                                    <div class="alert alert-warning">
+                                        <h6 class="alert-heading"><i class="fas fa-exclamation-triangle me-2"></i>Detected Symptoms</h6>
+                                        <p class="mb-0" id="detectedSymptoms">--</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Treatment Tab -->
+                            <div class="tab-pane fade" id="treatment" role="tabpanel">
+                                <div class="treatment-panel">
+                                    <h6 class="mb-4"><i class="fas fa-clipboard-list me-2"></i>Treatment Plan</h6>
+                                    <div class="treatment-timeline" id="treatmentTimeline">
+                                        <!-- Treatment steps will be added dynamically -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Weather Tab -->
+                            <div class="tab-pane fade" id="weather" role="tabpanel">
+                                <div class="weather-panel">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="weather-current bg-light rounded p-4">
+                                                <h6 class="mb-4 text-center">
+                                                    <i class="fas fa-cloud-sun fa-2x text-info me-2"></i>
+                                                    <span data-translate="current_conditions">Current Conditions</span>
+                                                </h6>
+                                                <div class="weather-display">
+                                                    <div class="d-flex align-items-center mb-3 p-3 bg-white rounded">
+                                                        <i class="fas fa-temperature-high fa-2x text-danger me-3"></i>
+                                                        <div>
+                                                            <strong>Temperature:</strong> 
+                                                            <span id="weatherTemp" class="h5 text-danger">--°C</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mb-3 p-3 bg-white rounded">
+                                                        <i class="fas fa-tint fa-2x text-primary me-3"></i>
+                                                        <div>
+                                                            <strong>Humidity:</strong> 
+                                                            <span id="weatherHumidity" class="h5 text-primary">--%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center p-3 bg-white rounded">
+                                                        <i class="fas fa-wind fa-2x text-success me-3"></i>
+                                                        <div>
+                                                            <strong>Wind:</strong> 
+                                                            <span id="weatherWind" class="h5 text-success">-- km/h</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center p-3 bg-white rounded">
+                                                        <i class="fas fa-cloud fa-2x text-secondary me-3"></i>
+                                                        <div>
+                                                            <strong>Conditions:</strong> 
+                                                            <span id="weatherConditions" class="h6 text-secondary">--</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="weather-risk bg-light rounded p-4">
+                                                <h6 class="mb-4 text-center">
+                                                    <i class="fas fa-exclamation-triangle fa-2x text-warning me-2"></i>
+                                                    <span data-translate="disease_risk">Disease Risk Analysis</span>
+                                                </h6>
+                                                <div class="risk-meter mb-4">
+                                                    <div class="progress" style="height: 40px; border-radius: 20px;">
+                                                        <div id="diseaseRiskBar" class="progress-bar bg-gradient" style="width: 0%; font-size: 1.1rem; font-weight: 600; line-height: 40px;">0%</div>
+                                                    </div>
+                                                    <div class="text-center mt-2">
+                                                        <span id="riskLevel" class="badge bg-secondary fs-6">--</span>
+                                                    </div>
+                                                </div>
+                                                <div class="risk-factors mt-4">
+                                                    <h6 class="mb-3">Risk Factors:</h6>
+                                                    <div class="factor-item mb-2 p-2 bg-white rounded">
+                                                        <i class="fas fa-thermometer-half text-danger me-2"></i>
+                                                        <span>Temperature Impact: <span id="tempRisk">--</span></span>
+                                                    </div>
+                                                    <div class="factor-item mb-2 p-2 bg-white rounded">
+                                                        <i class="fas fa-tint text-primary me-2"></i>
+                                                        <span>Humidity Impact: <span id="humidityRisk">--</span></span>
+                                                    </div>
+                                                    <div class="factor-item mb-2 p-2 bg-white rounded">
+                                                        <i class="fas fa-wind text-success me-2"></i>
+                                                        <span>Wind Impact: <span id="windRisk">--</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="weather-recommendations mt-4">
+                                        <div class="recommendations-header bg-gradient text-white rounded p-3 mb-3">
+                                            <h6 class="mb-0">
+                                                <i class="fas fa-lightbulb me-2"></i>
+                                                <span data-translate="weather_recommendations">Weather-Based Recommendations</span>
+                                            </h6>
+                                        </div>
+                                        <div class="recommendations-list" id="weatherRecommendations">
+                                            <!-- Weather recommendations will be added dynamically -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Details Tab -->
+                            <div class="tab-pane fade" id="details" role="tabpanel">
+                                <div class="details-panel">
+                                    <div class="analysis-details-card">
+                                        <h6 class="mb-3"><i class="fas fa-info-circle me-2"></i>Analysis Information</h6>
+                                        <div class="analysis-metrics">
+                                            <div class="metric-item mb-3 p-3 bg-light rounded">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-microscope fa-2x text-primary me-3"></i>
+                                                    <div>
+                                                        <strong>Visual Analysis:</strong><br>
+                                                        <span id="analysisNotes">--</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="metric-item mb-3 p-3 bg-light rounded">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-clock fa-2x text-success me-3"></i>
+                                                    <div>
+                                                        <strong>Analysis Time:</strong><br>
+                                                        <span id="analysisTime">--</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="metric-item mb-3 p-3 bg-light rounded">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-history fa-2x text-info me-3"></i>
+                                                    <div>
+                                                        <strong>Analysis ID:</strong><br>
+                                                        <span id="analysisId">--</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Alternatives Tab -->
+                        <div class="tab-pane fade" id="alternatives" role="tabpanel">
+                            <div class="alternatives-panel">
+                                <h6 class="mb-3"><i class="fas fa-list-alt me-2"></i>Alternative Diagnoses</h6>
+                                <div class="alternatives-list" id="alternativeDiagnoses">
+                                    <!-- Alternative diagnoses will be added dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: center;">
+        <div class="text-center text-white">
+            <div class="spinner-border mb-3" style="width: 3rem; height: 3rem;"></div>
+            <h4>Analyzing Plant Image...</h4>
+            <p>Our AI is examining your plant for disease detection</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-leaf me-2"></i>PlantGuard AI</h5>
+                    <p>Revolutionary plant disease detection powered by artificial intelligence. Protect your crops, increase yields, and promote sustainable farming practices.</p>
+                    <div class="social-icons mt-3">
+                        <a href="https://github.com/Lord-Selorm" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/lord-selorm-mceben-nornormey-661172301" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 data-translate="features">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#features" data-translate="features">Features</a></li>
+                        <li class="mb-2"><a href="#about" data-translate="about">About Us</a></li>
+                        <li class="mb-2"><a href="#contact" data-translate="contact">Contact</a></li>
+                        <li class="mb-2"><a href="/api/stats">API</a></li>
+                        <li class="mb-2"><a href="/health">Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 data-translate="services">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" data-translate="service_detection">Disease Detection</a></li>
+                        <li class="mb-2"><a href="#" data-translate="service_treatment">Treatment Plans</a></li>
+                        <li class="mb-2"><a href="#" data-translate="service_monitoring">Crop Monitoring</a></li>
+                        <li class="mb-2"><a href="#" data-translate="service_consulting">Consulting</a></li>
+                        <li class="mb-2"><a href="#" data-translate="service_research">Research</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 data-translate="contact">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>mcebenselorm1598@gmail.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+233 50 368 6210</li>
+                        <li class="mb-2"><i class="fab fa-github me-2"></i>github.com/Lord-Selorm</li>
+                        <li class="mb-2"><i class="fab fa-linkedin me-2"></i>linkedin.com/in/lord-selorm-mceben-nornormey-661172301</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 PlantGuard AI. All rights reserved. | Built with <i class="fas fa-heart text-danger"></i> for sustainable agriculture</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80; // Account for fixed navbar
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Language switching functionality
+        const languageDropdown = document.getElementById('languageDropdown');
+        const currentLangSpan = document.getElementById('currentLang');
+        let currentLang = new URLSearchParams(window.location.search).get('lang') || 'en';
+        
+        // Update current language display
+        function updateCurrentLanguage(lang) {
+            const langNames = {
+                'en': 'English',
+                'es': 'Español', 
+                'fr': 'Français',
+                'zh': '中文'
+            };
+            currentLangSpan.textContent = langNames[lang] || 'English';
+            currentLang = lang;
+            
+            // Update URL without page reload
+            const url = new URL(window.location);
+            url.searchParams.set('lang', lang);
+            window.history.replaceState({}, '', url);
+            
+            // Load translations
+            loadTranslations(lang);
+        }
+        
+        // Load translations for current language
+        function loadTranslations(lang) {
+            console.log('Loading translations for language:', lang);
+            fetch(`/api/translate?lang=${lang}`)
+                .then(response => {
+                    console.log('Translation response status:', response.status);
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Translation data received:', data);
+                    // Store translations globally
+                    window.translations = data.translation || {};
+                    
+                    // Update all translatable elements
+                    document.querySelectorAll('[data-translate]').forEach(element => {
+                        const key = element.getAttribute('data-translate');
+                        if (window.translations[key]) {
+                            element.textContent = window.translations[key];
+                        } else {
+                            console.warn('Translation missing for key:', key);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading translations:', error);
+                    // Fallback to English if translation fails
+                    if (lang !== 'en') {
+                        loadTranslations('en');
+                    }
+                });
+        }
+        
+        // Language switcher event listeners
+        document.querySelectorAll('[data-lang]').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = e.target.getAttribute('data-lang');
+                updateCurrentLanguage(lang);
+            });
+        });
+        
+        // Initialize with current language
+        // Parse URL to get language parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const langFromUrl = urlParams.get('lang') || 'en';
+        
+        updateCurrentLanguage(langFromUrl);
+        
+        // Load translations on page load
+        loadTranslations(langFromUrl);
+        
+        // Language switcher event listeners
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Show success message
+            const alertDiv = document.createElement('div');
+            alertDiv.className = 'alert alert-success alert-dismissible fade show position-fixed';
+            alertDiv.style.cssText = 'top: 100px; right: 20px; z-index: 9999; min-width: 300px;';
+            alertDiv.innerHTML = `
+                <strong>Message Sent!</strong><br>
+                Thank you for contacting PlantGuard AI. We'll get back to you soon!
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(alertDiv);
+            
+            // Reset form
+            this.reset();
+            
+            // Remove alert after 5 seconds
+            setTimeout(() => {
+                if (alertDiv.parentNode) {
+                    alertDiv.parentNode.removeChild(alertDiv);
+                }
+            }, 5000);
+            
+            // Log form data (in production, this would send to a server)
+            console.log('Contact form submission:', formData);
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Active navigation highlighting
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('section[id], div[id]');
+            const navLinks = document.querySelectorAll('.navbar-nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNav);
+        updateActiveNav(); // Call once on load
+
+        // Demo disease database
+        const diseaseDatabase = {
+            'Apple___Apple_scab': {
+                name: 'Apple Scab',
+                description: 'Apple scab is a fungal disease that causes olive-green to black spots on leaves and fruit. It can significantly reduce fruit quality and yield.',
+                severity: 'moderate',
+                treatment: [
+                    'Remove infected leaves and fruit immediately',
+                    'Apply fungicide containing captan or sulfur',
+                    'Improve air circulation by proper pruning',
+                    'Apply preventive fungicide in early spring'
+                ],
+                alternatives: [
+                    { name: 'Apple___healthy', confidence: 85 },
+                    { name: 'Apple___Cedar_apple_rust', confidence: 72 },
+                    { name: 'Apple___Fire_blight', confidence: 65 }
+                ]
+            },
+            'Tomato___Early_blight': {
+                name: 'Tomato Early Blight',
+                description: 'Early blight causes dark brown spots with concentric rings on lower leaves first. It can lead to significant defoliation and reduced fruit production.',
+                severity: 'high',
+                treatment: [
+                    'Remove affected leaves immediately',
+                    'Apply copper-based fungicide',
+                    'Ensure proper plant spacing for air circulation',
+                    'Use resistant varieties in future plantings'
+                ],
+                alternatives: [
+                    { name: 'Tomato___healthy', confidence: 78 },
+                    { name: 'Tomato___Late_blight', confidence: 68 },
+                    { name: 'Tomato___Septoria_leaf_spot', confidence: 55 }
+                ]
+            },
+            'Corn___Common_rust': {
+                name: 'Corn Common Rust',
+                description: 'Common rust appears as small, reddish-brown pustules on leaves. Severe infections can reduce photosynthesis and yield.',
+                severity: 'moderate',
+                treatment: [
+                    'Apply fungicide at first sign of infection',
+                    'Use resistant corn varieties',
+                    'Rotate crops to reduce pathogen buildup',
+                    'Ensure proper nitrogen fertilization'
+                ],
+                alternatives: [
+                    { name: 'Corn___healthy', confidence: 82 },
+                    { name: 'Corn___Northern_Leaf_Blight', confidence: 70 },
+                    { name: 'Corn___Gray_Leaf_Spot', confidence: 60 }
+                ]
+            },
+            'Healthy': {
+                name: 'Healthy Plant',
+                description: 'Your plant appears healthy with no visible signs of disease. Continue regular care and monitoring.',
+                severity: 'none',
+                treatment: [
+                    'Continue regular watering schedule',
+                    'Monitor for any changes in appearance',
+                    'Apply preventive care as needed',
+                    'Maintain proper nutrition and sunlight'
+                ],
+                alternatives: [
+                    { name: 'Early signs of nutrient deficiency', confidence: 45 },
+                    { name: 'Minor environmental stress', confidence: 30 },
+                    { name: 'Perfectly healthy', confidence: 95 }
+                ]
+            }
+        };
+
+        // File upload handling
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        const resultsSection = document.getElementById('resultsSection');
+
+        // Drag and drop
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFile(e.target.files[0]);
+            }
+        });
+
+        function handleFile(file) {
+            if (!file.type.startsWith('image/')) {
+                alert('Please upload an image file');
+                return;
+            }
+
+            if (file.size > 16 * 1024 * 1024) {
+                alert('File size must be less than 16MB');
+                return;
+            }
+
+            // Show footer again when starting new analysis
+            const footer = document.querySelector('.footer');
+            if (footer) {
+                footer.style.display = 'block';
+            }
+
+            // Display the uploaded image immediately
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const uploadedImage = document.getElementById('uploadedImage');
+                if (uploadedImage) {
+                    uploadedImage.src = e.target.result;
+                }
+            };
+            reader.readAsDataURL(file);
+
+            // Show loading
+            loadingOverlay.style.display = 'flex';
+
+            // Create FormData and upload to API
+            const formData = new FormData();
+            formData.append('file', file);
+
+            fetch('/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                console.log('Response status:', response.status);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Response data:', data);
+                loadingOverlay.style.display = 'none';
+                
+                if (data.error) {
+                    alert(data.error);
+                    return;
+                }
+                
+                displayResults(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error analyzing image. Please try again. Error: ' + error.message);
+                loadingOverlay.style.display = 'none';
+            });
+        }
+
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value.trim();
+            if (!query) {
+                alert('Please enter a plant or disease name');
+                return;
+            }
+
+            // Show loading
+            loadingOverlay.style.display = 'flex';
+
+            fetch('/api/search', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ query: query })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                loadingOverlay.style.display = 'none';
+                if (data.error) {
+                    alert(data.error);
+                    return;
+                }
+                displayResults(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error searching. Please try again. Error: ' + error.message);
+                loadingOverlay.style.display = 'none';
+            });
+        }
+
+        function analyzeImage() {
+            // This function now calls the actual API instead of using demo data
+            // The real analysis happens in the handleFile function
+            console.log('Analyzing image...');
+        }
+
+        function displayResults(data) {
+            console.log('Displaying results:', data);
+            
+            // Hide loading overlay
+            document.getElementById('loadingOverlay').style.display = 'none';
+            
+            // Show results section
+            document.getElementById('resultsSection').style.display = 'block';
+            
+            // Hide footer for focused analysis view
+            const footer = document.querySelector('.footer');
+            if (footer) {
+                footer.style.display = 'none';
+            }
+            
+            // Update disease information with enhanced display
+            document.getElementById('diseaseName').textContent = data.prediction;
+            document.getElementById('diseaseDescription').textContent = data.description;
+            document.getElementById('detectedSymptoms').textContent = data.symptoms;
+            
+            // Update disease metadata badges
+            const severityBadge = document.getElementById('diseaseSeverity');
+            if (severityBadge) {
+                severityBadge.textContent = data.severity;
+                severityBadge.className = `badge bg-${data.severity === 'high' ? 'danger' : data.severity === 'moderate' ? 'warning' : 'success'} me-2`;
+            }
+            
+            const confidenceBadge = document.getElementById('diseaseConfidence');
+            if (confidenceBadge) {
+                confidenceBadge.textContent = `${data.confidence}% Confidence`;
+            }
+            
+            // Update confidence meter with enhanced display and accuracy
+            const confidenceValue = document.getElementById('confidenceValue');
+            const confidenceCircle = document.getElementById('confidenceCircle');
+            
+            if (confidenceValue) {
+                confidenceValue.textContent = `${data.confidence}%`;
+            }
+            
+            if (confidenceCircle) {
+                // Calculate the offset for the circular progress
+                const circumference = 2 * Math.PI * 50; // radius = 50
+                const offset = circumference - (data.confidence / 100) * circumference;
+                confidenceCircle.style.strokeDashoffset = offset;
+                
+                // Update color based on confidence level with user-friendly descriptions
+                let confidenceColor = '#dc3545'; // red (low)
+                let confidenceText = 'Low Confidence';
+                
+                if (data.confidence >= 90) {
+                    confidenceColor = '#28a745'; // green (very high)
+                    confidenceText = 'Very High Confidence';
+                } else if (data.confidence >= 75) {
+                    confidenceColor = '#20c997'; // teal (high)
+                    confidenceText = 'High Confidence';
+                } else if (data.confidence >= 60) {
+                    confidenceColor = '#ffc107'; // yellow (moderate)
+                    confidenceText = 'Moderate Confidence';
+                } else if (data.confidence >= 40) {
+                    confidenceColor = '#fd7e14'; // orange (low-moderate)
+                    confidenceText = 'Low-Moderate Confidence';
+                }
+                
+                confidenceCircle.style.stroke = confidenceColor;
+                
+                // Update confidence meter description
+                const confidenceDescription = document.querySelector('.confidence-meter .text-center small');
+                if (confidenceDescription) {
+                    confidenceDescription.textContent = `${confidenceText} - AI Model Accuracy`;
+                }
+            }
+            
+            // Display treatment timeline
+            const treatmentTimeline = document.getElementById('treatmentTimeline');
+            if (treatmentTimeline && data.treatment && data.treatment.length > 0) {
+                treatmentTimeline.innerHTML = '';
+                data.treatment.forEach((step, index) => {
+                    const stepDiv = document.createElement('div');
+                    stepDiv.className = 'treatment-step mb-3';
+                    stepDiv.innerHTML = `
+                        <div class="d-flex align-items-start">
+                            <div class="step-number me-3">${index + 1}</div>
+                            <div class="step-content">
+                                <p class="mb-0">${step}</p>
+                            </div>
+                        </div>
+                    `;
+                    treatmentTimeline.appendChild(stepDiv);
+                });
+            }
+            
+            // Display weather analysis with enhanced display
+            if (data.weather_analysis) {
+                const weather = data.weather_analysis;
+                
+                // Update weather elements
+                const weatherTemp = document.getElementById('weatherTemp');
+                if (weatherTemp) weatherTemp.textContent = `${weather.temperature}°C`;
+                
+                const weatherHumidity = document.getElementById('weatherHumidity');
+                if (weatherHumidity) weatherHumidity.textContent = `${weather.humidity}%`;
+                
+                const weatherWind = document.getElementById('weatherWind');
+                if (weatherWind) weatherWind.textContent = `${weather.wind_speed || 'N/A'} km/h`;
+                
+                const weatherConditions = document.getElementById('weatherConditions');
+                if (weatherConditions) weatherConditions.textContent = weather.conditions;
+                
+                // Update disease risk bar with enhanced styling
+                const riskBar = document.getElementById('diseaseRiskBar');
+                if (riskBar) {
+                    const riskPercentage = weather.disease_risk || 0;
+                    riskBar.style.width = `${riskPercentage}%`;
+                    riskBar.textContent = `${riskPercentage}%`;
+                    
+                    // Dynamic color based on risk level
+                    if (riskPercentage <= 30) {
+                        riskBar.className = 'progress-bar bg-success';
+                    } else if (riskPercentage <= 60) {
+                        riskBar.className = 'progress-bar bg-warning';
+                    } else {
+                        riskBar.className = 'progress-bar bg-danger';
+                    }
+                }
+                
+                // Update risk level text with enhanced badges
+                const riskLevel = document.getElementById('riskLevel');
+                if (riskLevel) {
+                    const riskPercentage = weather.disease_risk || 0;
+                    let riskText = 'Low Risk';
+                    let riskClass = 'bg-success';
+                    
+                    if (riskPercentage > 60) {
+                        riskText = 'High Risk';
+                        riskClass = 'bg-danger';
+                    } else if (riskPercentage > 30) {
+                        riskText = 'Moderate Risk';
+                        riskClass = 'bg-warning';
+                    }
+                    
+                    riskLevel.textContent = riskText;
+                    riskLevel.className = `badge ${riskClass} fs-6`;
+                }
+                
+                // Update risk factors
+                const tempRisk = document.getElementById('tempRisk');
+                if (tempRisk) tempRisk.textContent = weather.temperature_impact || 'Low';
+                
+                const humidityRisk = document.getElementById('humidityRisk');
+                if (humidityRisk) humidityRisk.textContent = weather.humidity_impact || 'Low';
+                
+                const windRisk = document.getElementById('windRisk');
+                if (windRisk) windRisk.textContent = weather.wind_impact || 'Low';
+                
+                // Display weather recommendations with enhanced styling
+                const recommendationsList = document.getElementById('weatherRecommendations');
+                if (recommendationsList && weather.recommendations && weather.recommendations.length > 0) {
+                    recommendationsList.innerHTML = '';
+                    weather.recommendations.forEach((rec, index) => {
+                        const recDiv = document.createElement('div');
+                        recDiv.className = 'recommendation-item mb-3 p-3 bg-white rounded border-start border-4 border-success';
+                        recDiv.innerHTML = `
+                            <div class="d-flex align-items-start">
+                                <div class="recommendation-number me-3">
+                                    <span class="badge bg-success rounded-circle" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">${index + 1}</span>
+                                </div>
+                                <div class="recommendation-content">
+                                    <p class="mb-0"><i class="fas fa-check-circle text-success me-2"></i>${rec}</p>
+                                </div>
+                            </div>
+                        `;
+                        recommendationsList.appendChild(recDiv);
+                    });
+                }
+            }
+            
+            // Display analysis details
+            const analysisNotes = document.getElementById('analysisNotes');
+            if (analysisNotes) analysisNotes.textContent = data.analysis_notes || 'Visual analysis completed';
+            
+            const analysisTime = document.getElementById('analysisTime');
+            if (analysisTime) analysisTime.textContent = data.analysis_time || new Date().toLocaleString();
+            
+            const analysisId = document.getElementById('analysisId');
+            if (analysisId) analysisId.textContent = data.analysis_id || 'N/A';
+            
+            // Display alternative diagnoses
+            const alternativesList = document.getElementById('alternativeDiagnoses');
+            if (alternativesList && data.top3 && data.top3.length > 0) {
+                alternativesList.innerHTML = '';
+                data.top3.forEach(alt => {
+                    const altDiv = document.createElement('div');
+                    altDiv.className = 'alternative-item mb-2 p-2 border rounded';
+                    altDiv.innerHTML = `
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>${alt.class}</span>
+                            <span class="badge bg-secondary">${alt.confidence}%</span>
+                        </div>
+                    `;
+                    alternativesList.appendChild(altDiv);
+                });
+            }
+            
+            // Scroll to results
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

@@ -280,10 +280,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Project Lead**: [Your Name]
-- **Email**: [your.email@example.com]
-- **GitHub**: [github.com/yourusername]
-- **LinkedIn**: [linkedin.com/in/yourprofile]
+- **Project Lead**: McEben-Nornormey Lord Selorm
+- **Email**: mcebenselorm1598@gmail.com
+- **GitHub**: https://github.com/Lord-Selorm
 
 ---
 
